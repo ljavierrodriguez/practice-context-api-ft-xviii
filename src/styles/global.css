@@ -1,0 +1,26 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: all .5s ease-in-out;
+}
+
+#root {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+[data-theme="dark"]{
+    background-color: #000000 !important;
+    color: white !important;
+}
+
+[data-theme="light"]{
+    background-color: #ffffff !important;
+    color: black !important;
+}
