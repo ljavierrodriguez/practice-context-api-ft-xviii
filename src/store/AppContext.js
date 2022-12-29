@@ -48,13 +48,22 @@ const injectContext = (Component) => {
                     .then(() => {
                         actions.getTasks();
                     })
-            }
+            },
+            getUsers: () => {
+                fetch(`${API_URL}/users`)
+                    .then((response) => response.json())
+                    .then((data) => {
+                        setStore((preStore) => {
+                            return { ...preStore, users: data }
+                        })
+                    })
+            },
         })
 
         useEffect(() => {
             // component did mount
             console.log('Cargando Contexto');
-            actions.getTasks();
+            actions.getUsers();
 
         }, [])
 
